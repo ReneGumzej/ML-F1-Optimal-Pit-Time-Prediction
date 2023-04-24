@@ -6,5 +6,6 @@ Flask
 pandas
 xgboost
 catboost
+black
 
 -e .

@@ -1,0 +1,7 @@
+[ 2023-04-21 16:11:01,509 ] 23 root - INFO - Initialisation of data ingestion started
+[ 2023-04-21 16:11:01,515 ] 27 root - INFO - Read the dataset as DataFrame
+[ 2023-04-21 16:11:01,604 ] 31 root - INFO - Created 'artifacts' folder and saved the raw data as 'data.csv'
+[ 2023-04-21 16:11:01,605 ] 33 root - INFO - Train-Test-Split initiated
+[ 2023-04-21 16:11:01,681 ] 37 root - INFO - Train dataset created and saved as 'train.csv' in the 'artifacts' folder
+[ 2023-04-21 16:11:01,707 ] 39 root - INFO - Test dataset created and saved as 'test.csv' in the 'artifacts' folder
+[ 2023-04-21 16:11:01,707 ] 41 root - INFO - Data Ingestion is Completed
