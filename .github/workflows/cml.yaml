@@ -1,0 +1,18 @@
+name: pit-time-prediciton
+on: [push]
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    # optionally use a convenient Ubuntu LTS + DVC + CML image
+       container: ghcr.io/iterative/cml:0-dvc2-base1
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+          with:
+           python-version: '3.9'
+      - uses: iterative/setup-cml@v1
+      - name: Ingest Data
+        run: |
+          # Your ML workflow goes here
+          pip install -r requirements.txt
+          python src/components/data_ingestion.py
