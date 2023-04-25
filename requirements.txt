@@ -7,5 +7,3 @@ pandas
 xgboost
 catboost
 black
-
--e .
