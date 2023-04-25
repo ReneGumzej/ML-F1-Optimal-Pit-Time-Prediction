@@ -1,6 +1,7 @@
 import os
 import sys
 
+from . import ABS_DATA_PATH
 from src.exception import CustomException
 from src.logger import logging
 import pandas as pd
@@ -28,7 +29,7 @@ class DataIngestion:
         try:
             logging.info("Reading the dataset as DataFrame")
             df = pd.read_csv(
-                r".\notebook\data\data.csv"
+                ABS_DATA_PATH
             )  # here we can read from any datascource
             logging.info("Reading the dataset completed")
 
