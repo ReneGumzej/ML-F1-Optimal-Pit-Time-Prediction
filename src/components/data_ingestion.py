@@ -29,7 +29,7 @@ class DataIngestion:
         try:
             logging.info("Reading the dataset as DataFrame")
             df = pd.read_csv(
-                ABS_DATA_PATH
+                r'C:\Users\Rene\Documents\Data_Science_Projects\ML-F1-Optimal-Pit-Time-Prediction\notebook\data\data.csv'
             )  # here we can read from any datascource
             logging.info("Reading the dataset completed")
 
