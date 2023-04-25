@@ -76,3 +76,11 @@
 [ 2023-04-25 17:59:51,362 ] 50 root - INFO - Train dataset created and saved as 'train.csv' in the 'artifacts' folder
 [ 2023-04-25 17:59:51,378 ] 56 root - INFO - Test dataset created and saved as 'test.csv' in the 'artifacts' folder
 [ 2023-04-25 17:59:51,378 ] 60 root - INFO - Data Ingestion is Completed
+[ 2023-04-25 18:20:32,440 ] 27 root - INFO - Initialisation of data ingestion started
+[ 2023-04-25 18:20:32,440 ] 30 root - INFO - Reading the dataset as DataFrame
+[ 2023-04-25 18:20:32,456 ] 34 root - INFO - Reading the dataset completed
+[ 2023-04-25 18:20:32,539 ] 40 root - INFO - Created 'artifacts' folder and saved the raw data as 'data.csv'
+[ 2023-04-25 18:20:32,539 ] 44 root - INFO - Train-Test-Split initiated
+[ 2023-04-25 18:20:32,593 ] 50 root - INFO - Train dataset created and saved as 'train.csv' in the 'artifacts' folder
+[ 2023-04-25 18:20:32,622 ] 56 root - INFO - Test dataset created and saved as 'test.csv' in the 'artifacts' folder
+[ 2023-04-25 18:20:32,622 ] 60 root - INFO - Data Ingestion is Completed

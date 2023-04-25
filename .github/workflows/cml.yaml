@@ -5,7 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     container: docker://ghcr.io/iterative/cml:0-dvc2-base1
     steps:
+      - name: checkout repo content
       - uses: actions/checkout@v3
+
+      - name: Run Model trainer
       - run: |
           pip install -r requirements.txt
           python model_main.py 
