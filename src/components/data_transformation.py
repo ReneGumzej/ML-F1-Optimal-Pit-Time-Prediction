@@ -27,7 +27,7 @@ class DataTransformation:
         try:
             logging.info("Creating data transformation object")
 
-            numerical_columns = [
+            self.numerical_columns = [
                 "RoundNumber",
                 "eventYear",
                 "Stint",
@@ -81,11 +81,11 @@ class DataTransformation:
             )
 
             logging.info(f"Categorical columns: {categorical_columns}")
-            logging.info(f"Numerical columns: {numerical_columns}")
+            logging.info(f"Numerical columns: {self.numerical_columns}")
 
             preprocessor = ColumnTransformer(
                 [
-                    ("num_pipeline", num_pipeline, numerical_columns),
+                    ("num_pipeline", num_pipeline, self.numerical_columns),
                     ("cat_pipelines", cat_pipeline, categorical_columns),
                 ]
             )
