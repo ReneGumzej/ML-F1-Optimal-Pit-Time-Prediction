@@ -1,3 +1,5 @@
 import os
 
-ROOT_PATH = os.path.dirname(os.path.abspath(r"notebook\data\data.csv"))
+ROOT_PATH =os.path.abspath("data\data.csv")
+
+print(ROOT_PATH)
