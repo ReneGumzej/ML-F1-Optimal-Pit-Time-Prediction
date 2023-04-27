@@ -20,7 +20,7 @@ class DataTransformationConfig:
     preprocessor_obj_file_path = os.path.join("artifacts", "preprocessor.pkl")
 
 class DataTransformation:
-    def __init__(self):
+    def __init__(self) -> None:
         self.data_transformation_config = DataTransformationConfig()
 
     def get_data_transformer_object(self):
@@ -114,8 +114,8 @@ class DataTransformation:
             label = "lapNumberAtBeginingOfStint"
             drop_column = "Unnamed: 0"
 
-            y_train = train_df[label]
-            y_test = test_df[label]
+            y_train = np.array(train_df[label])
+            y_test = np.array(test_df[label])
 
             X_train = train_df.drop(
                 columns=[label, drop_column], axis=1
@@ -143,10 +143,10 @@ class DataTransformation:
             )
 
             return (
-                y_train,
-                y_test,
                 X_train_array,
                 X_test_array,
+                y_train,
+                y_test,
                 self.data_transformation_config.preprocessor_obj_file_path,
             )
         except Exception as e:

@@ -1,0 +1,152 @@
+[ 2023-04-28 00:14:44,718 ] 26 root - INFO - Initialisation of data ingestion started
+[ 2023-04-28 00:14:44,718 ] 29 root - INFO - Reading the dataset as DataFrame
+[ 2023-04-28 00:14:44,738 ] 33 root - INFO - Reading the dataset completed
+[ 2023-04-28 00:14:44,810 ] 39 root - INFO - Created 'artifacts' folder and saved the raw data as 'data.csv'
+[ 2023-04-28 00:14:44,810 ] 43 root - INFO - Train-Test-Split initiated
+[ 2023-04-28 00:14:44,870 ] 49 root - INFO - Train dataset created and saved as 'train.csv' in the 'artifacts' folder
+[ 2023-04-28 00:14:44,886 ] 55 root - INFO - Test dataset created and saved as 'test.csv' in the 'artifacts' folder
+[ 2023-04-28 00:14:44,886 ] 59 root - INFO - Data Ingestion is Completed
+[ 2023-04-28 00:14:44,886 ] 104 root - INFO - Starting data transformation
+[ 2023-04-28 00:14:44,914 ] 108 root - INFO - Read in train and test data
+[ 2023-04-28 00:14:44,914 ] 110 root - INFO - Obtaining preprocessing object
+[ 2023-04-28 00:14:44,914 ] 28 root - INFO - Creating data transformation object
+[ 2023-04-28 00:14:44,914 ] 68 root - INFO - Initialised numerical pipeline with 'Simpleimputer' and 'Standardscaler'
+[ 2023-04-28 00:14:44,914 ] 79 root - INFO - Initialised categorial pipeline with 'Simpleimputer', 'OneHotEncoder' and 'Standardscaler'
+[ 2023-04-28 00:14:44,914 ] 83 root - INFO - Categorical columns: ['EventName', 'Team', 'Compound', 'Driver', 'bestLapTimeIsFrom']
+[ 2023-04-28 00:14:44,918 ] 84 root - INFO - Numerical columns: ['RoundNumber', 'eventYear', 'Stint', 'bestPreRaceTime', 'meanAirTemp', 'meanTrackTemp', 'meanHumid', 'Rainfall', 'GridPosition', 'Position', 'raceStintsNums', 'TyreAge', 'StintLen', 'CircuitLength', 'designedLaps', 'fuel_slope', 'fuel_bias', 'deg_slope', 'deg_bias', 'lag_slope_mean', 'lag_bias_mean']
+[ 2023-04-28 00:14:44,918 ] 93 root - INFO - Initialised ColumnTransformer with 'numerical pipeline' and 'categorial pipeline'
+[ 2023-04-28 00:14:44,918 ] 96 root - INFO - Preprocessor object is created!
+[ 2023-04-28 00:14:44,918 ] 128 root - INFO - Applying preprocessing object on training dataframe and testing dataframe.
+[ 2023-04-28 00:14:44,952 ] 138 root - INFO - Saved preprocessing object.
+[ 2023-04-28 00:15:06,785 ] 26 root - INFO - Initialisation of data ingestion started
+[ 2023-04-28 00:15:06,785 ] 29 root - INFO - Reading the dataset as DataFrame
+[ 2023-04-28 00:15:06,800 ] 33 root - INFO - Reading the dataset completed
+[ 2023-04-28 00:15:06,887 ] 39 root - INFO - Created 'artifacts' folder and saved the raw data as 'data.csv'
+[ 2023-04-28 00:15:06,887 ] 43 root - INFO - Train-Test-Split initiated
+[ 2023-04-28 00:15:06,946 ] 49 root - INFO - Train dataset created and saved as 'train.csv' in the 'artifacts' folder
+[ 2023-04-28 00:15:06,954 ] 55 root - INFO - Test dataset created and saved as 'test.csv' in the 'artifacts' folder
+[ 2023-04-28 00:15:06,954 ] 59 root - INFO - Data Ingestion is Completed
+[ 2023-04-28 00:15:06,954 ] 104 root - INFO - Starting data transformation
+[ 2023-04-28 00:15:06,985 ] 108 root - INFO - Read in train and test data
+[ 2023-04-28 00:15:06,985 ] 110 root - INFO - Obtaining preprocessing object
+[ 2023-04-28 00:15:06,985 ] 28 root - INFO - Creating data transformation object
+[ 2023-04-28 00:15:06,985 ] 68 root - INFO - Initialised numerical pipeline with 'Simpleimputer' and 'Standardscaler'
+[ 2023-04-28 00:15:06,985 ] 79 root - INFO - Initialised categorial pipeline with 'Simpleimputer', 'OneHotEncoder' and 'Standardscaler'
+[ 2023-04-28 00:15:06,985 ] 83 root - INFO - Categorical columns: ['EventName', 'Team', 'Compound', 'Driver', 'bestLapTimeIsFrom']
+[ 2023-04-28 00:15:06,985 ] 84 root - INFO - Numerical columns: ['RoundNumber', 'eventYear', 'Stint', 'bestPreRaceTime', 'meanAirTemp', 'meanTrackTemp', 'meanHumid', 'Rainfall', 'GridPosition', 'Position', 'raceStintsNums', 'TyreAge', 'StintLen', 'CircuitLength', 'designedLaps', 'fuel_slope', 'fuel_bias', 'deg_slope', 'deg_bias', 'lag_slope_mean', 'lag_bias_mean']
+[ 2023-04-28 00:15:06,985 ] 93 root - INFO - Initialised ColumnTransformer with 'numerical pipeline' and 'categorial pipeline'
+[ 2023-04-28 00:15:06,985 ] 96 root - INFO - Preprocessor object is created!
+[ 2023-04-28 00:15:06,985 ] 128 root - INFO - Applying preprocessing object on training dataframe and testing dataframe.
+[ 2023-04-28 00:15:07,016 ] 138 root - INFO - Saved preprocessing object.
+[ 2023-04-28 00:15:07,016 ] 31 root - INFO - Starting model training
+[ 2023-04-28 00:15:07,016 ] 48 root - INFO - Entering the train process
+[ 2023-04-28 00:24:41,250 ] 26 root - INFO - Initialisation of data ingestion started
+[ 2023-04-28 00:24:41,250 ] 29 root - INFO - Reading the dataset as DataFrame
+[ 2023-04-28 00:24:41,266 ] 33 root - INFO - Reading the dataset completed
+[ 2023-04-28 00:24:41,351 ] 39 root - INFO - Created 'artifacts' folder and saved the raw data as 'data.csv'
+[ 2023-04-28 00:24:41,351 ] 43 root - INFO - Train-Test-Split initiated
+[ 2023-04-28 00:24:41,396 ] 49 root - INFO - Train dataset created and saved as 'train.csv' in the 'artifacts' folder
+[ 2023-04-28 00:24:41,412 ] 55 root - INFO - Test dataset created and saved as 'test.csv' in the 'artifacts' folder
+[ 2023-04-28 00:24:41,412 ] 59 root - INFO - Data Ingestion is Completed
+[ 2023-04-28 00:24:41,412 ] 104 root - INFO - Starting data transformation
+[ 2023-04-28 00:24:41,443 ] 108 root - INFO - Read in train and test data
+[ 2023-04-28 00:24:41,443 ] 110 root - INFO - Obtaining preprocessing object
+[ 2023-04-28 00:24:41,443 ] 28 root - INFO - Creating data transformation object
+[ 2023-04-28 00:24:41,443 ] 68 root - INFO - Initialised numerical pipeline with 'Simpleimputer' and 'Standardscaler'
+[ 2023-04-28 00:24:41,443 ] 79 root - INFO - Initialised categorial pipeline with 'Simpleimputer', 'OneHotEncoder' and 'Standardscaler'
+[ 2023-04-28 00:24:41,443 ] 83 root - INFO - Categorical columns: ['EventName', 'Team', 'Compound', 'Driver', 'bestLapTimeIsFrom']
+[ 2023-04-28 00:24:41,443 ] 84 root - INFO - Numerical columns: ['RoundNumber', 'eventYear', 'Stint', 'bestPreRaceTime', 'meanAirTemp', 'meanTrackTemp', 'meanHumid', 'Rainfall', 'GridPosition', 'Position', 'raceStintsNums', 'TyreAge', 'StintLen', 'CircuitLength', 'designedLaps', 'fuel_slope', 'fuel_bias', 'deg_slope', 'deg_bias', 'lag_slope_mean', 'lag_bias_mean']
+[ 2023-04-28 00:24:41,443 ] 93 root - INFO - Initialised ColumnTransformer with 'numerical pipeline' and 'categorial pipeline'
+[ 2023-04-28 00:24:41,443 ] 96 root - INFO - Preprocessor object is created!
+[ 2023-04-28 00:24:41,443 ] 128 root - INFO - Applying preprocessing object on training dataframe and testing dataframe.
+[ 2023-04-28 00:24:41,481 ] 138 root - INFO - Saved preprocessing object.
+[ 2023-04-28 00:24:41,483 ] 31 root - INFO - Starting model training
+[ 2023-04-28 00:24:41,483 ] 48 root - INFO - Entering the train process
+[ 2023-04-28 00:24:54,416 ] 26 root - INFO - Initialisation of data ingestion started
+[ 2023-04-28 00:24:54,416 ] 29 root - INFO - Reading the dataset as DataFrame
+[ 2023-04-28 00:24:54,448 ] 33 root - INFO - Reading the dataset completed
+[ 2023-04-28 00:24:54,516 ] 39 root - INFO - Created 'artifacts' folder and saved the raw data as 'data.csv'
+[ 2023-04-28 00:24:54,516 ] 43 root - INFO - Train-Test-Split initiated
+[ 2023-04-28 00:24:54,579 ] 49 root - INFO - Train dataset created and saved as 'train.csv' in the 'artifacts' folder
+[ 2023-04-28 00:24:54,579 ] 55 root - INFO - Test dataset created and saved as 'test.csv' in the 'artifacts' folder
+[ 2023-04-28 00:24:54,579 ] 59 root - INFO - Data Ingestion is Completed
+[ 2023-04-28 00:24:54,579 ] 104 root - INFO - Starting data transformation
+[ 2023-04-28 00:24:54,617 ] 108 root - INFO - Read in train and test data
+[ 2023-04-28 00:24:54,617 ] 110 root - INFO - Obtaining preprocessing object
+[ 2023-04-28 00:24:54,617 ] 28 root - INFO - Creating data transformation object
+[ 2023-04-28 00:24:54,617 ] 68 root - INFO - Initialised numerical pipeline with 'Simpleimputer' and 'Standardscaler'
+[ 2023-04-28 00:24:54,617 ] 79 root - INFO - Initialised categorial pipeline with 'Simpleimputer', 'OneHotEncoder' and 'Standardscaler'
+[ 2023-04-28 00:24:54,617 ] 83 root - INFO - Categorical columns: ['EventName', 'Team', 'Compound', 'Driver', 'bestLapTimeIsFrom']
+[ 2023-04-28 00:24:54,617 ] 84 root - INFO - Numerical columns: ['RoundNumber', 'eventYear', 'Stint', 'bestPreRaceTime', 'meanAirTemp', 'meanTrackTemp', 'meanHumid', 'Rainfall', 'GridPosition', 'Position', 'raceStintsNums', 'TyreAge', 'StintLen', 'CircuitLength', 'designedLaps', 'fuel_slope', 'fuel_bias', 'deg_slope', 'deg_bias', 'lag_slope_mean', 'lag_bias_mean']
+[ 2023-04-28 00:24:54,617 ] 93 root - INFO - Initialised ColumnTransformer with 'numerical pipeline' and 'categorial pipeline'
+[ 2023-04-28 00:24:54,617 ] 96 root - INFO - Preprocessor object is created!
+[ 2023-04-28 00:24:54,617 ] 128 root - INFO - Applying preprocessing object on training dataframe and testing dataframe.
+[ 2023-04-28 00:24:54,632 ] 138 root - INFO - Saved preprocessing object.
+[ 2023-04-28 00:24:54,632 ] 31 root - INFO - Starting model training
+[ 2023-04-28 00:24:54,632 ] 48 root - INFO - Entering the train process
+[ 2023-04-28 00:27:54,111 ] 26 root - INFO - Initialisation of data ingestion started
+[ 2023-04-28 00:27:54,111 ] 29 root - INFO - Reading the dataset as DataFrame
+[ 2023-04-28 00:27:54,137 ] 33 root - INFO - Reading the dataset completed
+[ 2023-04-28 00:27:54,200 ] 39 root - INFO - Created 'artifacts' folder and saved the raw data as 'data.csv'
+[ 2023-04-28 00:27:54,200 ] 43 root - INFO - Train-Test-Split initiated
+[ 2023-04-28 00:27:54,269 ] 49 root - INFO - Train dataset created and saved as 'train.csv' in the 'artifacts' folder
+[ 2023-04-28 00:27:54,284 ] 55 root - INFO - Test dataset created and saved as 'test.csv' in the 'artifacts' folder
+[ 2023-04-28 00:27:54,284 ] 59 root - INFO - Data Ingestion is Completed
+[ 2023-04-28 00:27:54,284 ] 104 root - INFO - Starting data transformation
+[ 2023-04-28 00:27:54,300 ] 108 root - INFO - Read in train and test data
+[ 2023-04-28 00:27:54,300 ] 110 root - INFO - Obtaining preprocessing object
+[ 2023-04-28 00:27:54,300 ] 28 root - INFO - Creating data transformation object
+[ 2023-04-28 00:27:54,300 ] 68 root - INFO - Initialised numerical pipeline with 'Simpleimputer' and 'Standardscaler'
+[ 2023-04-28 00:27:54,300 ] 79 root - INFO - Initialised categorial pipeline with 'Simpleimputer', 'OneHotEncoder' and 'Standardscaler'
+[ 2023-04-28 00:27:54,300 ] 83 root - INFO - Categorical columns: ['EventName', 'Team', 'Compound', 'Driver', 'bestLapTimeIsFrom']
+[ 2023-04-28 00:27:54,300 ] 84 root - INFO - Numerical columns: ['RoundNumber', 'eventYear', 'Stint', 'bestPreRaceTime', 'meanAirTemp', 'meanTrackTemp', 'meanHumid', 'Rainfall', 'GridPosition', 'Position', 'raceStintsNums', 'TyreAge', 'StintLen', 'CircuitLength', 'designedLaps', 'fuel_slope', 'fuel_bias', 'deg_slope', 'deg_bias', 'lag_slope_mean', 'lag_bias_mean']
+[ 2023-04-28 00:27:54,300 ] 93 root - INFO - Initialised ColumnTransformer with 'numerical pipeline' and 'categorial pipeline'
+[ 2023-04-28 00:27:54,300 ] 96 root - INFO - Preprocessor object is created!
+[ 2023-04-28 00:27:54,300 ] 128 root - INFO - Applying preprocessing object on training dataframe and testing dataframe.
+[ 2023-04-28 00:27:54,338 ] 138 root - INFO - Saved preprocessing object.
+[ 2023-04-28 00:27:54,338 ] 31 root - INFO - Starting model training
+[ 2023-04-28 00:27:54,338 ] 48 root - INFO - Entering the train process
+[ 2023-04-28 00:28:46,980 ] 26 root - INFO - Initialisation of data ingestion started
+[ 2023-04-28 00:28:46,980 ] 29 root - INFO - Reading the dataset as DataFrame
+[ 2023-04-28 00:28:47,012 ] 33 root - INFO - Reading the dataset completed
+[ 2023-04-28 00:28:47,081 ] 39 root - INFO - Created 'artifacts' folder and saved the raw data as 'data.csv'
+[ 2023-04-28 00:28:47,081 ] 43 root - INFO - Train-Test-Split initiated
+[ 2023-04-28 00:28:47,141 ] 49 root - INFO - Train dataset created and saved as 'train.csv' in the 'artifacts' folder
+[ 2023-04-28 00:28:47,156 ] 55 root - INFO - Test dataset created and saved as 'test.csv' in the 'artifacts' folder
+[ 2023-04-28 00:28:47,156 ] 59 root - INFO - Data Ingestion is Completed
+[ 2023-04-28 00:28:47,156 ] 104 root - INFO - Starting data transformation
+[ 2023-04-28 00:28:47,172 ] 108 root - INFO - Read in train and test data
+[ 2023-04-28 00:28:47,172 ] 110 root - INFO - Obtaining preprocessing object
+[ 2023-04-28 00:28:47,172 ] 28 root - INFO - Creating data transformation object
+[ 2023-04-28 00:28:47,172 ] 68 root - INFO - Initialised numerical pipeline with 'Simpleimputer' and 'Standardscaler'
+[ 2023-04-28 00:28:47,172 ] 79 root - INFO - Initialised categorial pipeline with 'Simpleimputer', 'OneHotEncoder' and 'Standardscaler'
+[ 2023-04-28 00:28:47,172 ] 83 root - INFO - Categorical columns: ['EventName', 'Team', 'Compound', 'Driver', 'bestLapTimeIsFrom']
+[ 2023-04-28 00:28:47,172 ] 84 root - INFO - Numerical columns: ['RoundNumber', 'eventYear', 'Stint', 'bestPreRaceTime', 'meanAirTemp', 'meanTrackTemp', 'meanHumid', 'Rainfall', 'GridPosition', 'Position', 'raceStintsNums', 'TyreAge', 'StintLen', 'CircuitLength', 'designedLaps', 'fuel_slope', 'fuel_bias', 'deg_slope', 'deg_bias', 'lag_slope_mean', 'lag_bias_mean']
+[ 2023-04-28 00:28:47,172 ] 93 root - INFO - Initialised ColumnTransformer with 'numerical pipeline' and 'categorial pipeline'
+[ 2023-04-28 00:28:47,172 ] 96 root - INFO - Preprocessor object is created!
+[ 2023-04-28 00:28:47,172 ] 128 root - INFO - Applying preprocessing object on training dataframe and testing dataframe.
+[ 2023-04-28 00:28:47,194 ] 138 root - INFO - Saved preprocessing object.
+[ 2023-04-28 00:28:47,210 ] 31 root - INFO - Starting model training
+[ 2023-04-28 00:28:47,210 ] 48 root - INFO - Entering the train process
+[ 2023-04-28 00:29:47,741 ] 26 root - INFO - Initialisation of data ingestion started
+[ 2023-04-28 00:29:47,741 ] 29 root - INFO - Reading the dataset as DataFrame
+[ 2023-04-28 00:29:47,762 ] 33 root - INFO - Reading the dataset completed
+[ 2023-04-28 00:29:47,832 ] 39 root - INFO - Created 'artifacts' folder and saved the raw data as 'data.csv'
+[ 2023-04-28 00:29:47,836 ] 43 root - INFO - Train-Test-Split initiated
+[ 2023-04-28 00:29:47,892 ] 49 root - INFO - Train dataset created and saved as 'train.csv' in the 'artifacts' folder
+[ 2023-04-28 00:29:47,908 ] 55 root - INFO - Test dataset created and saved as 'test.csv' in the 'artifacts' folder
+[ 2023-04-28 00:29:47,908 ] 59 root - INFO - Data Ingestion is Completed
+[ 2023-04-28 00:29:47,908 ] 104 root - INFO - Starting data transformation
+[ 2023-04-28 00:29:47,932 ] 108 root - INFO - Read in train and test data
+[ 2023-04-28 00:29:47,932 ] 110 root - INFO - Obtaining preprocessing object
+[ 2023-04-28 00:29:47,932 ] 28 root - INFO - Creating data transformation object
+[ 2023-04-28 00:29:47,932 ] 68 root - INFO - Initialised numerical pipeline with 'Simpleimputer' and 'Standardscaler'
+[ 2023-04-28 00:29:47,932 ] 79 root - INFO - Initialised categorial pipeline with 'Simpleimputer', 'OneHotEncoder' and 'Standardscaler'
+[ 2023-04-28 00:29:47,932 ] 83 root - INFO - Categorical columns: ['EventName', 'Team', 'Compound', 'Driver', 'bestLapTimeIsFrom']
+[ 2023-04-28 00:29:47,932 ] 84 root - INFO - Numerical columns: ['RoundNumber', 'eventYear', 'Stint', 'bestPreRaceTime', 'meanAirTemp', 'meanTrackTemp', 'meanHumid', 'Rainfall', 'GridPosition', 'Position', 'raceStintsNums', 'TyreAge', 'StintLen', 'CircuitLength', 'designedLaps', 'fuel_slope', 'fuel_bias', 'deg_slope', 'deg_bias', 'lag_slope_mean', 'lag_bias_mean']
+[ 2023-04-28 00:29:47,932 ] 93 root - INFO - Initialised ColumnTransformer with 'numerical pipeline' and 'categorial pipeline'
+[ 2023-04-28 00:29:47,932 ] 96 root - INFO - Preprocessor object is created!
+[ 2023-04-28 00:29:47,932 ] 128 root - INFO - Applying preprocessing object on training dataframe and testing dataframe.
+[ 2023-04-28 00:29:47,960 ] 138 root - INFO - Saved preprocessing object.
+[ 2023-04-28 00:29:47,960 ] 31 root - INFO - Starting model training
+[ 2023-04-28 00:29:47,960 ] 48 root - INFO - Entering the train process
