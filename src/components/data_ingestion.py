@@ -9,7 +9,7 @@ from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 
 from src.components.data_transformation import DataTransformation
-
+from . import ABS_DATA_PATH
 
 @dataclass
 class DataIngestionConfig:
@@ -28,7 +28,7 @@ class DataIngestion:
         try:
             logging.info("Reading the dataset as DataFrame")
             df = pd.read_csv(
-                r".\notebook\data\data.csv"
+                ABS_DATA_PATH
             )  # here we can read from any datascource
             logging.info("Reading the dataset completed")
 

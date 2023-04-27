@@ -111,17 +111,17 @@ class DataTransformation:
             
             preprocessing_obj = self.get_data_transformer_object()
 
-            target_column_name = "lapNumberAtBeginingOfStint"
+            label = "lapNumberAtBeginingOfStint"
             drop_column = "Unnamed: 0"
 
-            target_feature_train_df = train_df[target_column_name]
-            target_feature_test_df = test_df[target_column_name]
+            y_train = train_df[label]
+            y_test = test_df[label]
 
-            input_feature_train_df = train_df.drop(
-                columns=[target_column_name, drop_column], axis=1
+            X_train = train_df.drop(
+                columns=[label, drop_column], axis=1
             )
-            input_feature_test_df = test_df.drop(
-                columns=[target_column_name, drop_column], axis=1
+            X_test = test_df.drop(
+                columns=[label, drop_column], axis=1
             )
             
 
@@ -129,27 +129,24 @@ class DataTransformation:
                 "Applying preprocessing object on training dataframe and testing dataframe."
             )
 
-            input_feature_train_arr = preprocessing_obj.fit_transform(
-                input_feature_train_df
+            X_train_array = preprocessing_obj.fit_transform(
+                X_train
             )
-            input_feature_test_arr = preprocessing_obj.transform(input_feature_test_df)
+            X_test_array = preprocessing_obj.transform(X_test)
 
-            print("Input feature shape",input_feature_train_arr.shape)
-            print("target feature shape",np.array(target_feature_train_df).shape)
             
-            train_arr = np.column_stack((input_feature_train_arr, np.array(target_feature_train_df)))
-            test_arr = np.column_stack((input_feature_test_arr, np.array(target_feature_test_df)))
-
             logging.info("Saved preprocessing object.")
 
             save_object(
                 file_path=self.data_transformation_config.preprocessor_obj_file_path,
-                obj=preprocessing_obj,
+                object=preprocessing_obj,
             )
 
             return (
-                train_arr,
-                test_arr,
+                y_train,
+                y_test,
+                X_train_array,
+                X_test_array,
                 self.data_transformation_config.preprocessor_obj_file_path,
             )
         except Exception as e:
