@@ -29,7 +29,7 @@ class DataIngestion:
         try:
             logging.info("Reading the dataset as DataFrame")
             df = pd.read_csv(
-                r'notebook\data\data.csv'
+                r'.\notebook\data\data.csv'
             )  # here we can read from any datascource
             logging.info("Reading the dataset completed")
 
