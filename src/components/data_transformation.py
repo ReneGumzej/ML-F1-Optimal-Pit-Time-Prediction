@@ -40,7 +40,7 @@ class DataTransformation:
                 "Position",
                 "raceStintsNums",
                 "TyreAge",
-                "StintLen",
+                "lapNumberAtBeginingOfStint",
                 "CircuitLength",
                 "designedLaps",
                 "fuel_slope",
@@ -111,7 +111,7 @@ class DataTransformation:
             
             preprocessing_obj = self.get_data_transformer_object()
 
-            label = "lapNumberAtBeginingOfStint"
+            label = "StintLen"
             drop_column = "Unnamed: 0"
 
             y_train = np.array(train_df[label])

@@ -9,7 +9,7 @@ from sklearn.neighbors import KNeighborsRegressor
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.ensemble import RandomForestRegressor, AdaBoostRegressor, GradientBoostingRegressor
 from sklearn.linear_model import LinearRegression
-from sklearn.model_selection import GridSearchCV
+
 from src.exception import CustomException
 from src.logger import logging
 
