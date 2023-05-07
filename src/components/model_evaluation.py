@@ -39,7 +39,7 @@ class ModelEvaluator:
 
             logging.info("Check if the model score is above 60%")
 
-            if best_r2_score > 0.6:
+            if best_r2_score < 0.6:
                 print("No model reached the 60% mark!")
 
             best = sorted(best_models, key=best_models.get, reverse=True)

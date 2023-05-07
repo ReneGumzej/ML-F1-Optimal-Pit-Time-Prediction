@@ -39,3 +39,44 @@
              predictor=None, random_state=None, ...)', R2-Score: '0.7970466851995491'
 [ 2023-05-07 15:53:56,665 ] 49 root - INFO - Saving model object
 [ 2023-05-07 15:53:56,674 ] 56 root - INFO - Model evalutaion completed!
+[ 2023-05-07 20:47:49,130 ] 26 root - INFO - Initialisation of data ingestion started
+[ 2023-05-07 20:47:49,130 ] 29 root - INFO - Reading the dataset as DataFrame
+[ 2023-05-07 20:47:49,137 ] 33 root - INFO - Reading the dataset completed
+[ 2023-05-07 20:47:49,225 ] 39 root - INFO - Created 'artifacts' folder and saved the raw data as 'data.csv'
+[ 2023-05-07 20:47:49,225 ] 43 root - INFO - Train-Test-Split initiated
+[ 2023-05-07 20:47:49,268 ] 49 root - INFO - Train dataset created and saved as 'train.csv' in the 'artifacts' folder
+[ 2023-05-07 20:47:49,283 ] 55 root - INFO - Test dataset created and saved as 'test.csv' in the 'artifacts' folder
+[ 2023-05-07 20:47:49,283 ] 59 root - INFO - Data Ingestion completed!
+[ 2023-05-07 20:47:49,283 ] 105 root - INFO - Starting data transformation
+[ 2023-05-07 20:47:49,330 ] 109 root - INFO - Read in train and test data
+[ 2023-05-07 20:47:49,330 ] 111 root - INFO - Obtaining preprocessing object
+[ 2023-05-07 20:47:49,330 ] 29 root - INFO - Creating data transformation object
+[ 2023-05-07 20:47:49,330 ] 69 root - INFO - Initialised numerical pipeline with 'Simpleimputer' and 'Standardscaler'
+[ 2023-05-07 20:47:49,330 ] 80 root - INFO - Initialised categorial pipeline with 'Simpleimputer', 'OneHotEncoder' and 'Standardscaler'
+[ 2023-05-07 20:47:49,330 ] 84 root - INFO - Categorical columns: ['EventName', 'eventYear', 'Team', 'Compound', 'Driver', 'bestLapTimeIsFrom']
+[ 2023-05-07 20:47:49,330 ] 85 root - INFO - Numerical columns: ['RoundNumber', 'Stint', 'bestPreRaceTime', 'meanAirTemp', 'meanTrackTemp', 'meanHumid', 'Rainfall', 'GridPosition', 'Position', 'raceStintsNums', 'TyreAge', 'lapNumberAtBeginingOfStint', 'CircuitLength', 'designedLaps', 'fuel_slope', 'fuel_bias', 'deg_slope', 'deg_bias', 'lag_slope_mean', 'lag_bias_mean']
+[ 2023-05-07 20:47:49,330 ] 94 root - INFO - Initialised ColumnTransformer with 'numerical pipeline' and 'categorial pipeline'
+[ 2023-05-07 20:47:49,330 ] 97 root - INFO - Preprocessor object is created!
+[ 2023-05-07 20:47:49,333 ] 135 root - INFO - Applying preprocessing object on training dataframe and testing dataframe.
+[ 2023-05-07 20:47:49,361 ] 144 root - INFO - Saving preprocessing object.
+[ 2023-05-07 20:47:49,362 ] 151 root - INFO - Data transformation completed!
+[ 2023-05-07 20:47:49,363 ] 23 root - INFO - Starting model training
+[ 2023-05-07 20:47:49,363 ] 33 root - INFO - Entering the train process
+[ 2023-05-07 20:52:02,639 ] 49 root - INFO - Model training completed!
+[ 2023-05-07 20:52:02,645 ] 22 root - INFO - initializing the evaluation process
+[ 2023-05-07 20:52:02,645 ] 24 root - INFO - Start to evaluate the models
+[ 2023-05-07 20:52:02,645 ] 37 root - INFO - Best model found
+[ 2023-05-07 20:52:02,645 ] 40 root - INFO - Check if the model score is above 60%
+[ 2023-05-07 20:52:02,661 ] 46 root - INFO - Best model found: Model: XGBRegressor(base_score=None, booster=None, callbacks=None,
+             colsample_bylevel=None, colsample_bynode=None,
+             colsample_bytree=None, early_stopping_rounds=None,
+             enable_categorical=False, eval_metric=None, feature_types=None,
+             gamma=None, gpu_id=None, grow_policy=None, importance_type=None,
+             interaction_constraints=None, learning_rate=0.1, max_bin=None,
+             max_cat_threshold=None, max_cat_to_onehot=None,
+             max_delta_step=None, max_depth=None, max_leaves=None,
+             min_child_weight=None, missing=nan, monotone_constraints=None,
+             n_estimators=256, n_jobs=None, num_parallel_tree=None,
+             predictor=None, random_state=None, ...), R2-Score: 0.8014018845953543
+[ 2023-05-07 20:52:02,661 ] 49 root - INFO - Saving model object
+[ 2023-05-07 20:52:02,677 ] 56 root - INFO - Model evalutaion completed!

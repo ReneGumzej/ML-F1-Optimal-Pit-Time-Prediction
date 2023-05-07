@@ -1,0 +1,451 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="login">
+    <h1>Pit Stop Strategy</h1>
+
+    <form action="{{ url_for('home')}}" method="post">
+        <h1>
+            <legend>F1 Pitstop Prediction</legend>
+        </h1>
+        <div class="mb-3">
+            <label class="form-label">Event name</label>
+            <select class="form-control" name="EventName" placeholder="Enter event name" required>
+                <option class="placeholder" selected disabled value="">Select event name</option>
+
+                <option value="Abu Dhabi Grand Prix">
+                    Abu Dhabi Grand Prix
+                </option>
+                <option value="Australian Grand Prix">
+                    Australian Grand Prix
+                </option>
+                <option value="Austrian Grand Prix">
+                    Austrian Grand Prix
+                </option>
+                <option value="Azerbaijan Grand Prix">
+                    Azerbaijan Grand Prix
+                </option>
+                <option value="Bahrain Grand Prix">
+                    Bahrain Grand Prix
+                </option>
+                <option value="Belgian Grand Prix">
+                    Belgian Grand Prix
+                </option>
+                <option value="Brazilian Grand Prix">
+                    Brazilian Grand Prix
+                </option>
+                <option value="British Grand Prix">
+                    British Grand Prix
+                </option>
+                <option value="Canadian Grand Prix">
+                    Canadian Grand Prix
+                </option>
+                <option value="Chinese Grand Prix">
+                    Chinese Grand Prix
+                </option>
+                <option value="Dutch Grand Prix">
+                    Dutch Grand Prix
+                </option>
+                <option value="Eifel Grand Prix">
+                    Eifel Grand Prix
+                </option>
+                <option value="Emilia Romagna Grand Prix">
+                    Emilia Romagna Grand Prix
+                </option>
+                <option value="French Grand Prix">
+                    French Grand Prix
+                </option>
+                <option value="German Grand Prix">
+                    German Grand Prix
+                </option>
+                <option value="Hungarian Grand Prix">
+                    Hungarian Grand Prix
+                </option>
+                <option value="Italian Grand Prix">
+                    Italian Grand Prix
+                </option>
+                <option value="Japanese Grand Prix">
+                    Japanese Grand Prix
+                </option>
+                <option value="Mexican Grand Prix">
+                    Mexican Grand Prix
+                </option>
+                <option value="Mexico City Grand Prix">
+                    Mexico City Grand Prix
+                </option>
+                <option value="Miami Grand Prix">
+                    Miami Grand Prix
+                </option>
+                <option value="Monaco Grand Prix">
+                    Monaco Grand Prix
+                </option>
+                <option value="Portuguese Grand Prix">
+                    Portuguese Grand Prix
+                </option>
+                <option value="Qatar Grand Prix">
+                    Qatar Grand Prix
+                </option>
+                <option value="Russian Grand Prix">
+                    Russian Grand Prix
+                </option>
+                <option value="Sakhir Grand Prix'">
+                    Sakhir Grand Prix'
+                </option>
+                <option value="Singapore Grand Prix">
+                    Singapore Grand Prix
+                </option>
+                <option value="Spanish Grand Prix">
+                    Spanish Grand Prix
+                </option>
+                <option value="Styrian Grand Prix">
+                    Styrian Grand Prix
+                </option>
+                <option value="São Paulo Grand Prix">
+                    São Paulo Grand Prix
+                </option>
+                <option value="Turkish Grand Prix">
+                    Turkish Grand Prix
+                </option>
+                <option value="Tuscan Grand Prix">
+                    Tuscan Grand Prix
+                </option>
+                <option value="United States Grand Prix">
+                    United States Grand Prix
+                </option>
+
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Team</label>
+            <select class="form-control" name="team" placeholder="Enter the Team" required>
+                <option class="placeholder" selected disabled value="">Select Team</option>
+                <option value="Alfa Romeo Racing">
+                    Alfa Romeo Racing
+                </option>
+                <option value="AlphaTauri">
+                    AlphaTauri
+                </option>
+                <option value="Ferrari">
+                    Ferrari
+                </option>
+                <option value="Haas F1 Team">
+                    Haas F1 Team
+                </option>
+                <option value="McLaren">
+                    McLaren
+                </option>
+                <option value="Mercedes">
+                    Mercedes
+                </option>
+                <option value="Racing Point">
+                    Racing Point
+                </option>
+                <option value="Red Bull Racing">
+                    Red Bull Racing
+                </option>
+                <option value="Renault">
+                    Renault
+                </option>
+                <option value="Williams">
+                    Williams
+                </option>
+                <option value="Sauber">
+                    Sauber
+                </option>
+                <option value="Toro Rosso">
+                    Toro Rosso
+                </option>
+                <option value="Alpine">
+                    Alpine
+                </option>
+                <option value="Aston Martin">
+                    Aston Martin
+                </option>
+                <option value="Force India">
+                    Force India
+                </option>
+                <option value="Alfa Romeo">
+                    Alfa Romeo
+                </option>
+
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Compound</label>
+            <select class="form-control" name="compound" placeholder="Enter the Compound" required>
+                <option class="placeholder" selected disabled value="">Select the Compound</option>
+                <option value="HARD">
+                    HARD
+                </option>
+                <option value="MEDIUM">
+                    MEDIUM
+                </option>
+                <option value="SOFT">
+                    SOFT
+                </option>
+                <option value="SUPERSOFT">
+                    SUPERSOFT
+                </option>
+                <option value="ULTRASOFT">
+                    ULTRASOFT
+                </option>
+                <option value="HYPERSOFT">
+                    HYPERSOFT
+                </option>
+                <option value="UNKNOWN">
+                    UNKNOWN
+                </option>
+                <option value="WET">
+                    WET
+                </option>
+                <option value="INTERMEDIATE">
+                    INTERMEDIATE
+                </option>
+
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Driver</label>
+            <select class="form-control" name="driver" placeholder="Enter the Driver" required>
+                <option class="placeholder" selected disabled value="">Select driver</option>
+                <option value="GIO">
+                    GIO
+                </option>
+                <option value="RAI">
+                    RAI
+                </option>
+                <option value="GAS">
+                    GAS
+                </option>
+                <option value="KVY">
+                    KVY
+                </option>
+                <option value="LEC">
+                    LEC
+                </option>
+                <option value="VET">
+                    VET
+                </option>
+                <option value="FIT">
+                    FIT
+                </option>
+                <option value="MAG">
+                    MAG
+                </option>
+                <option value="NOR">
+                    NOR
+                </option>
+                <option value="SAI">
+                    SAI
+                </option>
+                <option value="BOT">
+                    BOT
+                </option>
+                <option value="HAM">
+                    HAM
+                </option>
+                <option value="PER">
+                    PER
+                </option>
+                <option value="STR">
+                    STR
+                </option>
+                <option value="ALB">
+                    ALB
+                </option>
+                <option value="VER">
+                    VER
+                </option>
+                <option value="OCO">
+                    OCO
+                </option>
+                <option value="RIC">
+                    RIC
+                </option>
+                <option value="LAT">
+                    LAT
+                </option>
+                <option value="RUS">
+                    RUS
+                </option>
+                <option value="GRO">
+                    GRO
+                </option>
+                <option value="ALO">
+                    ALO
+                </option>
+                <option value="VAN">
+                    VAN
+                </option>
+                <option value="HUL">
+                    HUL
+                </option>
+                <option value="ERI">
+                    ERI
+                </option>
+                <option value="HAR">
+                    HAR
+                </option>
+                <option value="SIR">
+                    SIR
+                </option>
+                <option value="KUB">
+                    KUB
+                </option>
+                <option value="TSU">
+                    TSU
+                </option>
+                <option value="MSC">
+                    MSC
+                </option>
+                <option value="ZHO">
+                    ZHO
+                </option>
+                <option value="MAZ">
+                    MAZ
+                </option>
+                <option value="AIT">
+                    AIT
+                </option>
+
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Event Year</label>
+            <select class="form-control" name="eventYear" placeholder="Enter the Event Year" required>
+                <option class="placeholder" selected disabled value="">Select Event Year</option>
+                <option value="2018">
+                    2018
+                </option>
+                <option value="2019">
+                    2019
+                </option>
+                <option value="2020">
+                    2020
+                </option>
+                <option value="2021">
+                    2021
+                </option>
+                <option value="2022">
+                    2022
+                </option>
+
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Best Lap time from </label>
+            <select class="form-control" name="bestLapTimeIsFrom" placeholder="Enter you Run" required>
+                <option class="placeholder" selected disabled value="">Select Run</option>
+                <option value="Qualifying">
+                    Qualifying
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Round number out of 22</label>
+            <input class="form-control" type="number" name="RoundNumber" placeholder="Enter your Round number" min='1'
+                max='22' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Stint number</label>
+            <input class="form-control" type="number" name="stint" placeholder="Enter your Reading Score" min='1'
+                max='8' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Best Race Time</label>
+            <input class="form-control" type="number" name="bestPreRaceTime" placeholder="Enter your Reading Score"
+                min='1' max='200' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Mean Air Temperature</label>
+            <input class="form-control" type="number" name="meanAirTemp" placeholder="Enter your Reading Score" min='1'
+                max='50' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Mean track Temperature</label>
+            <input class="form-control" type="number" name="meanTrackTemp" placeholder="Enter your Reading Score"
+                min='1' max='70' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Mean Humidity</label>
+            <input class="form-control" type="number" name="meanHumid" placeholder="Enter your Reading Score" min='1'
+                max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Rainfall 0=No, 1=Yes</label>
+            <input class="form-control" type="number" name="Rainfall" placeholder="Enter your Reading Score" min='0'
+                max='1' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Grid Position</label>
+            <input class="form-control" type="number" name="GridPosition" placeholder="Enter your Reading Score" min='1'
+                max='21' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">End Position</label>
+            <input class="form-control" type="number" name="Position" placeholder="Enter your Reading Score" min='1'
+                max='20' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Race Stints Numbers</label>
+            <input class="form-control" type="number" name="raceStintsNums" placeholder="Enter your Reading Score"
+                min='1' max='8' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Tyre Age</label>
+            <input class="form-control" type="number" name="TyreAge" placeholder="Enter your Reading Score" min='1'
+                max='57' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Lap at Beginning of Stint</label>
+            <input class="form-control" type="number" name="lapNumberAtBeginingOfStint"
+                placeholder="Enter your Reading Score" min='1' max='79' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Circuit Length Age</label>
+            <input class="form-control" type="number" name="CircuitLength" placeholder="Enter your Reading Score"
+                min='1' max='10' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Designed Laps</label>
+            <input class="form-control" type="number" name="designedLaps" placeholder="Enter your Reading Score" min='1'
+                max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">fuel slope</label>
+            <input class="form-control" type="number" name="fuel_slope" placeholder="Enter your Reading Score" min='-3'
+                max='3' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">fuel bias</label>
+            <input class="form-control" type="number" name="fuel_bias" placeholder="Enter your Reading Score" min='1'
+                max='200' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">deg slope</label>
+            <input class="form-control" type="number" name="deg_slope" placeholder="Enter your Reading Score" min='-20'
+                max='20' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">deg bias</label>
+            <input class="form-control" type="number" name="deg_bias" placeholder="Enter your Reading Score" min='-30'
+                max='900' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">lag slope mean</label>
+            <input class="form-control" type="number" name="lag_slope_mean" placeholder="Enter your Reading Score"
+                min='-10' max='10' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">lag bias mean</label>
+            <input class="form-control" type="number" name="lag_bias_mean" placeholder="Enter your Reading Score"
+                min='1' max='900' />
+        </div>
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict your Stint Length" required />
+        </div>
+    </form>
+    <h2>
+        Prediction: {{results}}
+    </h2>
+    {% endblock content %}
