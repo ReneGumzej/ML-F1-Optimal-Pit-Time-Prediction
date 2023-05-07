@@ -1,6 +1,7 @@
 from src.components.data_ingestion import DataIngestion
 from src.components.data_transformation import DataTransformation
 from src.components.model_trainer import ModelTrainer
+from src.components.model_evaluation import ModelEvaluator
 
 
 if __name__ == "__main__":
@@ -13,6 +14,9 @@ if __name__ == "__main__":
 
     model_trainer = ModelTrainer()
     model_performance = model_trainer.initiate_model_trainer(
-        X_train, y_train, X_test, y_test)
+        X_train, y_train)
 
-    print(model_performance)
+    model_evalutor = ModelEvaluator()
+    best_r2_score, best_model = model_evalutor.get_best_model(model_performance,X_test,y_test)
+
+    print("Best Model: ", best_model, " Best Score: ", best_r2_score)

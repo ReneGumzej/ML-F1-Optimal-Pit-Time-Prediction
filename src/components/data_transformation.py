@@ -135,13 +135,14 @@ class DataTransformation:
             X_test_array = preprocessing_obj.transform(X_test)
 
             
-            logging.info("Saved preprocessing object.")
+            logging.info("Saving preprocessing object.")
 
             save_object(
                 file_path=self.data_transformation_config.preprocessor_obj_file_path,
                 object=preprocessing_obj,
             )
 
+            logging.info("Data transformation completed!")
             return (
                 X_train_array,
                 X_test_array,
