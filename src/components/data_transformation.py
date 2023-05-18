@@ -6,7 +6,7 @@ import pandas as pd
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import OneHotEncoder, StandardScaler
+from sklearn.preprocessing import OrdinalEncoder, StandardScaler
 
 from src.exception import CustomException
 from src.logger import logging
@@ -73,12 +73,12 @@ class DataTransformation:
             cat_pipeline = Pipeline(
                 steps=[
                     ("imputer", SimpleImputer(strategy="most_frequent")),
-                    ("one_hot_encoder", OneHotEncoder()),
+                    ("ordinal_encoder", OrdinalEncoder()),
                     ("scaler", StandardScaler(with_mean=False)),
                 ]
             )
             logging.info(
-                "Initialised categorial pipeline with 'Simpleimputer', 'OneHotEncoder' and 'Standardscaler'"
+                "Initialised categorial pipeline with 'Simpleimputer', 'OrdinalEncoder' and 'Standardscaler'"
             )
 
             logging.info(f"Categorical columns: {categorical_columns}")
@@ -116,7 +116,7 @@ class DataTransformation:
             test_df.loc[test_df["Rainfall"] > 0 , "Rainfall"] = 1
             
             train_df["eventYear"] = train_df["eventYear"].astype("object")
-            train_df["eventYear"] = train_df["eventYear"].astype("object")
+            test_df["eventYear"] = test_df["eventYear"].astype("object")
             
             preprocessing_obj = self.get_data_transformer_object()
             
