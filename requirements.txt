@@ -6,7 +6,6 @@ Flask
 python-dotenv
 pandas
 xgboost
-catboost
 black
 
 -e .
