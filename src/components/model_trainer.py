@@ -3,7 +3,6 @@ import sys
 
 from dataclasses import dataclass
 
-from catboost import CatBoostRegressor
 from xgboost import XGBRegressor
 from sklearn.ensemble import AdaBoostRegressor
 
