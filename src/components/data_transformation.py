@@ -6,7 +6,7 @@ import pandas as pd
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import OneHotEncoder, StandardScaler
+from sklearn.preprocessing import OrdinalEncoder, StandardScaler
 
 from src.exception import CustomException
 from src.logger import logging
@@ -19,6 +19,7 @@ from src.utils import save_object
 class DataTransformationConfig:
     preprocessor_obj_file_path = os.path.join("artifacts", "preprocessor.pkl")
 
+
 class DataTransformation:
     def __init__(self) -> None:
         self.data_transformation_config = DataTransformationConfig()
@@ -29,7 +30,6 @@ class DataTransformation:
 
             numerical_columns = [
                 "RoundNumber",
-                "eventYear",
                 "Stint",
                 "bestPreRaceTime",
                 "meanAirTemp",
@@ -49,9 +49,10 @@ class DataTransformation:
                 "deg_bias",
                 "lag_slope_mean",
                 "lag_bias_mean",
-            ] #The target feature must be dropped
+            ]  # The target feature must be dropped
             categorical_columns = [
                 "EventName",
+                "eventYear",
                 "Team",
                 "Compound",
                 "Driver",
@@ -72,12 +73,12 @@ class DataTransformation:
             cat_pipeline = Pipeline(
                 steps=[
                     ("imputer", SimpleImputer(strategy="most_frequent")),
-                    ("one_hot_encoder", OneHotEncoder()),
+                    ("ordinal_encoder", OrdinalEncoder()),
                     ("scaler", StandardScaler(with_mean=False)),
                 ]
             )
             logging.info(
-                "Initialised categorial pipeline with 'Simpleimputer', 'OneHotEncoder' and 'Standardscaler'"
+                "Initialised categorial pipeline with 'Simpleimputer', 'OrdinalEncoder' and 'Standardscaler'"
             )
 
             logging.info(f"Categorical columns: {categorical_columns}")
@@ -108,10 +109,17 @@ class DataTransformation:
             logging.info("Read in train and test data")
 
             logging.info("Obtaining preprocessing object")
-            
-            preprocessing_obj = self.get_data_transformer_object()
 
             label = "StintLen"
+            
+            train_df.loc[train_df["Rainfall"] > 0 , "Rainfall"] = 1
+            test_df.loc[test_df["Rainfall"] > 0 , "Rainfall"] = 1
+            
+            train_df["eventYear"] = train_df["eventYear"].astype("object")
+            test_df["eventYear"] = test_df["eventYear"].astype("object")
+            
+            preprocessing_obj = self.get_data_transformer_object()
+            
             drop_column = "Unnamed: 0"
 
             y_train = np.array(train_df[label])
@@ -123,7 +131,6 @@ class DataTransformation:
             X_test = test_df.drop(
                 columns=[label, drop_column], axis=1
             )
-            
 
             logging.info(
                 "Applying preprocessing object on training dataframe and testing dataframe."
@@ -134,14 +141,14 @@ class DataTransformation:
             )
             X_test_array = preprocessing_obj.transform(X_test)
 
-            
-            logging.info("Saved preprocessing object.")
+            logging.info("Saving preprocessing object.")
 
             save_object(
                 file_path=self.data_transformation_config.preprocessor_obj_file_path,
                 object=preprocessing_obj,
             )
 
+            logging.info("Data transformation completed!")
             return (
                 X_train_array,
                 X_test_array,

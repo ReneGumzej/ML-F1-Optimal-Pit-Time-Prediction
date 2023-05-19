@@ -3,6 +3,8 @@ seaborn
 matplotlib
 scikit-learn
 Flask
+python-dotenv
+WTForms
 pandas
 xgboost
 catboost

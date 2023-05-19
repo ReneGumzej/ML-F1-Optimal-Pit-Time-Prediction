@@ -37,4 +37,11 @@ def get_best_params(X_train, y_train ,model, parameter):
     grid_clf.fit(X_train, y_train)
     
     return grid_clf.best_params_
+
+def load_objet(file_path):
+    try:
+        with open(file_path, "rb") as file_obj:
+            return pickle.load(file_obj)
+    except Exception as e:
+        raise CustomException(e, sys)
     

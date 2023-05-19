@@ -56,7 +56,7 @@ class DataIngestion:
                 "Test dataset created and saved as 'test.csv' in the 'artifacts' folder"
             )
 
-            logging.info("Data Ingestion is Completed")
+            logging.info("Data Ingestion completed!")
 
             return (
                 self.ingestion_config.train_data_path,

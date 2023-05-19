@@ -5,10 +5,7 @@ from dataclasses import dataclass
 
 from catboost import CatBoostRegressor
 from xgboost import XGBRegressor
-from sklearn.neighbors import KNeighborsRegressor
-from sklearn.tree import DecisionTreeRegressor
-from sklearn.ensemble import RandomForestRegressor, AdaBoostRegressor, GradientBoostingRegressor
-from sklearn.linear_model import LinearRegression
+from sklearn.ensemble import AdaBoostRegressor
 
 from src.exception import CustomException
 from src.logger import logging
@@ -17,33 +14,20 @@ from src.utils import get_best_params
 from config.config import model_parameter
 
 
-@dataclass
-class ModelTrainerConfiguration:
-    model_object_path = os.path.join("artifacts", "model.pkl")
-
-
 class ModelTrainer:
     def __init__(self) -> None:
-        self.model_config = ModelTrainerConfiguration()
+        pass
         
-
-    def initiate_model_trainer(self, X_train, y_train, X_test, y_test):
+    def initiate_model_trainer(self, X_train, y_train):
 
         logging.info("Starting model training")
 
         try:
-            trained_model = []
-            reached_score = []
+            trained_models = []
 
             models = {
-                "Decision Tree": DecisionTreeRegressor(),
-                "Random Forest": RandomForestRegressor(),
-                "Gradient Boosting": GradientBoostingRegressor(),
-                "Linear Regression": LinearRegression(),
                 "XGBRegressor": XGBRegressor(),
-                "CatBoosting Regressor": CatBoostRegressor(verbose=False),
                 "AdaBoost Regressor": AdaBoostRegressor(),
-                "KNearest Regressor": KNeighborsRegressor()
             }
 
             logging.info("Entering the train process")
@@ -60,20 +44,10 @@ class ModelTrainer:
 
                 model.fit(X_train, y_train)
 
-                print(best_parameter)
+                trained_models.append(model)
 
-                score = model.score(X_test, y_test)
-
-                print("Model: ", model)
-                print("Score: ", score)
-
-                trained_model.append(model)
-                reached_score.append(score)
-
-            model_performance = list(zip(trained_model, reached_score))
-
-            logging.info("Completed model training loop")
-            return model_performance 
+            logging.info("Model training completed!")
+            return trained_models
 
         except Exception as e:
             CustomException(e, sys)
